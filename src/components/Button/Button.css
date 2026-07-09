@@ -1,4 +1,6 @@
 .btn{
+    width: 100%;
+    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -7,9 +9,9 @@
     border: none;
     font-family: "Lato", sans-serif;
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 600;
     cursor: pointer;
-    transition: 0.3s;
+    transition: all 0.25s ease;
 }
 
 .btn img{
@@ -25,13 +27,17 @@
 }
 
 .btn--primary:hover{
-    background: transparent;
+    background: #505456;
 }
 
-.btn--outline{
+.btn--google{
     background: transparent;
 
-    border: 1px solid #4A4E50;
+    border: 1px solid #525252;
     
     color: white;
+}
+
+.btn--google:hover{
+    background: rgba(255, 255, 255, .05);
 }

@@ -1,0 +1,61 @@
+.input-group{
+    width: 100%;
+}
+
+.input-label{
+    display: block;
+    font-family: "Lato", sans-serif;
+    margin-bottom: 8px;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.input-wrapper{
+    position: relative;
+
+    width: 100%;
+}
+
+.input-field{
+    width: 100%;
+    height: 50px;
+    padding: 0 50px 0 18px;
+    border: 1px solid #3E4144;
+    border-radius: 999px;
+    background: transparent;
+    color: #ffffff;
+    font-size: 14px;
+    font-family: "Lato", sans-serif;
+    outline: none;
+    transition: .25s;
+}
+
+.input-field::placeholder{
+    color: #9CA3AF;
+}
+
+.input-field:focus{
+    border-color: #ffffff;
+}
+
+.input-toggle{
+    position: absolute;
+    top: 50%;
+    right: 18px;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.input-toggle img{
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+}
