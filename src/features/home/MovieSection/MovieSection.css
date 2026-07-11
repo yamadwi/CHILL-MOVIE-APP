@@ -1,0 +1,15 @@
+.movie-section {
+    margin-top: 40px;
+}
+
+.movie-section__title {
+    color: white;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.movie-section__list {
+    display: flex;
+    gap: 24px;
+    overflow-x: auto;
+}
