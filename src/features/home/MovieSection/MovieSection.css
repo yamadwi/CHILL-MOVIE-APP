@@ -1,15 +1,51 @@
 .movie-section {
-    margin-top: 40px;
+    position: relative;
+}
+
+.movie-section+.movie-section {
+    margin-top: 56px;
 }
 
 .movie-section__title {
     color: white;
     font-size: 25px;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
 }
 
 .movie-section__list {
     display: flex;
     gap: 24px;
     overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.movie-section__list::-webkit-scrollbar {
+    display: none;
+}
+
+.movie-section__arrow {
+    position: absolute;
+    top: 55%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    cursor: pointer;
+    z-index: 10;
+    transition: .2s;
+}
+
+.movie-section__arrow:hover {
+    background: rgba(0, 0, 0, 0.9);
+}
+
+.movie-section__arrow--left {
+    left: -25px;
+}
+
+.movie-section__arrow--right {
+    right: -25px;
 }
