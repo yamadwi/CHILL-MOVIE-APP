@@ -13,9 +13,19 @@ function MoviePreview({
 
     if (!movie || !rect) return null;
 
+    const PREVIEW_WIDTH = 250;
+    const PREVIEW_HEIGHT = 250;
+
     const previewStyle = {
-        left: rect.left + window.scrollX,
-        top: rect.top + window.scrollY - 110,
+        left: 
+            rect.left + 
+            window.scrollX -
+            ((PREVIEW_WIDTH - rect.width) / 2),
+
+        top: 
+            rect.top + 
+            window.scrollY -
+            (PREVIEW_HEIGHT - rect.height),
     };
 
     return(

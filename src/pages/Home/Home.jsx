@@ -23,11 +23,6 @@ function Home(){
 
     const handlePreview = (movie, rect) => {
 
-        if (preview?.movie.id === movie.id) {
-            setPreview(null);
-            return;
-        }
-
         setPreview({
             movie,
             rect,
@@ -35,12 +30,24 @@ function Home(){
 
     };
 
+    const handleClosePreview = () => {
+
+        setPreview(null);
+
+    };
+
     const handleOpenPoup = () => {
 
         if (!preview) return;
 
-        setPopupMovie(preview.Hero);
+        setPopupMovie(preview.movie);
         setPreview(null);
+
+    };
+
+    const handleClosePopup = () => {
+
+        setPopupMovie(null);
 
     };
 
@@ -96,7 +103,7 @@ function Home(){
                 <MoviePreview
                     movie={preview.movie}
                     rect={preview.rect}
-                    onClose={() => setPreview(null)}
+                    onClose={handleClosePreview}
                     onOpen={handleOpenPoup}
                 />
 
@@ -104,7 +111,7 @@ function Home(){
 
             <MoviePopup
                 movie={popupMovie}
-                onClose={() => setPopupMovie(null)}
+                onClose={handleClosePopup}
             />
 
         </>
