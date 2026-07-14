@@ -1,0 +1,452 @@
+.movie-popup {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    background: rgba(0, 0, 0, .72);
+    backdrop-filter: blur(8px);
+    z-index: 99999;
+    animation: popupFade .25s ease;
+}
+
+.movie-popup__container {
+    width: min(900px, 100%);
+    max-height: 90vh;
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    background: #181A1C;
+    border-radius: 18px;
+    box-shadow: 0 25px 80px rgba(0, 0, 0, .65);
+    animation: popupScale .25s ease;
+}
+
+.movie-popup__container::-webkit-scrollbar {
+    display: none;
+}
+
+.movie-popup__backdrop {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.movie-popup__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top,
+            #181A1C 6%,
+            rgba(24, 26, 28, .6) 45%,
+            rgba(24, 26, 28, 0) 100%);
+}
+
+@keyframes popupFade {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+@keyframes popupScale {
+
+    from {
+        transform: scale(.95);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+}
+
+/* ===========================
+   POPUP HEADER
+=========================== */
+
+.movie-popup__header {
+    position: relative;
+    width: 100%;
+    height: 430px;
+    overflow: hidden;
+    border-radius: 18px 18px 0 0;
+}
+
+.movie-popup__hero {
+    position: absolute;
+    left: 40px;
+    right: 40px;
+    bottom: 32px;
+    z-index: 2;
+}
+
+.movie-popup__title {
+    color: #FFFFFF;
+    font-size: 46px;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.movie-popup__actions {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.movie-popup__play {
+    min-width: 130px;
+    height: 52px;
+    border: none;
+    border-radius: 999px;
+    background: #0F1E93;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.movie-popup__play:hover {
+    background: #2337D1;
+}
+
+.movie-popup__check {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, .45);
+    background: #2F3334;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.movie-popup__check:hover {
+    background: #454A4C;
+}
+
+.movie-popup__check img {
+    width: 18px;
+}
+
+.movie-popup__close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 46px;
+    height: 46px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, .55);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 5;
+    transition: .2s;
+
+}
+
+.movie-popup__close:hover {
+    background: rgba(0, 0, 0, .85);
+}
+
+.movie-popup__close img {
+    width: 18px;
+}
+
+/* ===========================
+   POPUP INFO
+=========================== */
+
+.movie-popup__content {
+
+    padding: 32px 40px 40px;
+
+}
+
+.movie-popup__info {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 24px;
+
+}
+
+.movie-popup__age {
+
+    padding: 4px 12px;
+
+    border-radius: 999px;
+
+    background: #3D4142;
+
+    color: white;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+}
+
+.movie-popup__duration {
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: 500;
+
+}
+
+.movie-popup__bottom {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 48px;
+
+}
+
+.movie-popup__left {
+
+    flex: 1;
+
+    max-width: 470px;
+
+}
+
+.movie-popup__description {
+
+    color: #D1D1D1;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+}
+
+.movie-popup__right {
+
+    width: 280px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+
+}
+
+.movie-popup__detail-row {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 12px;
+
+}
+
+.movie-popup__label {
+
+    width: 72px;
+
+    color: #8B8B8B;
+
+    font-size: 13px;
+
+    flex-shrink: 0;
+
+}
+
+.movie-popup__value {
+
+    color: #FFFFFF;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+}
+
+/* ===========================
+   RECOMMENDATION
+=========================== */
+
+.movie-popup__recommendation {
+
+    padding: 0 40px 40px;
+
+}
+
+.movie-popup__section-title {
+
+    color: #FFFFFF;
+
+    font-size: 20px;
+
+    font-weight: 600;
+
+    margin-bottom: 20px;
+
+}
+
+.movie-popup__recommendation-list {
+
+    display: flex;
+
+    gap: 16px;
+
+}
+
+.movie-popup__recommendation-list .movie-card {
+
+    width: 150px;
+
+    cursor: pointer;
+
+    transition: .25s;
+
+}
+
+.movie-popup__recommendation-list .movie-card:hover {
+
+    transform: scale(1.05);
+
+}
+
+/* ===========================
+   EPISODE LIST
+=========================== */
+
+.movie-popup__episode {
+
+    padding: 0 40px 40px;
+
+}
+
+.movie-popup__episode-list {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+.movie-popup__episode-item {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 18px;
+
+    padding: 18px 0;
+
+    border-bottom: 1px solid rgba(255, 255, 255, .08);
+
+    transition: background-color .2s;
+
+}
+
+.movie-popup__episode-item:hover {
+    background: rgba(255, 255, 255, .04);
+}
+
+.movie-popup__episode-number {
+
+    width: 28px;
+
+    color: #A0A0A0;
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    text-align: center;
+
+    padding-top: 18px;
+
+    flex-shrink: 0;
+
+}
+
+.movie-popup__episode-thumbnail {
+
+    width: 180px;
+
+    height: 100px;
+
+    object-fit: cover;
+
+    border-radius: 8px;
+
+    flex-shrink: 0;
+
+}
+
+.movie-popup__episode-content {
+
+    flex: 1;
+
+}
+
+.movie-popup__episode-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 8px;
+
+}
+
+.movie-popup__episode-header h4 {
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+}
+
+.movie-popup__episode-header span {
+
+    color: #A0A0A0;
+
+    font-size: 14px;
+
+}
+
+.movie-popup__episode-content p {
+
+    color: #D1D1D1;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+}

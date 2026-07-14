@@ -44,7 +44,7 @@ const series = [
       "Jeremy Swift",
     ],
 
-    creator: [
+    director: [
       "Bill Lawrence",
       "Jason Sudeikis",
       "Brendan Hunt",
@@ -101,7 +101,7 @@ const series = [
       "Lim Se-mi",
     ],
 
-    creator: [
+    director: [
       "Sung Yong-il",
     ],
 
@@ -155,7 +155,7 @@ const series = [
       "Lomon",
     ],
 
-    creator: [
+    director: [
       "Lee Jae-kyoo",
     ],
 
@@ -208,7 +208,7 @@ const series = [
       "Nijiro Murakami",
     ],
 
-    creator: [
+    director: [
       "Shinsuke Sato",
     ],
 
@@ -260,7 +260,7 @@ const series = [
       "Yuki Ono",
     ],
 
-    creator: [
+    director: [
       "Muneyuki Kaneshiro",
       "Yusuke Nomura",
     ],
@@ -315,7 +315,7 @@ const series = [
       "Kenta Miyake",
     ],
 
-    creator: [
+    director: [
       "Kohei Horikoshi",
     ],
 
@@ -368,7 +368,7 @@ const series = [
       "Seo Ji-hye",
     ],
 
-    creator: [
+    director: [
       "Kang Soo-yeon",
     ],
 

@@ -56,7 +56,7 @@ const movies = [
       "T.J. Miller",
     ],
 
-    director: "Don Hall & Chris Williams",
+    director: ["Don Hall & Chris Williams"],
 
     recommendation: [6, 9, 4],
   },
@@ -93,7 +93,7 @@ const movies = [
       "Colleen O'Shaughnessey",
     ],
 
-    director: "Jeff Fowler",
+    director: ["Jeff Fowler"],
 
     recommendation: [1, 4, 7],
   },
@@ -129,7 +129,7 @@ const movies = [
       "Jeff Goldblum",
     ],
 
-    director: "Colin Trevorrow",
+    director: ["Colin Trevorrow"],
 
     recommendation: [7, 11, 12],
   },
@@ -165,7 +165,7 @@ const movies = [
       "Jake Johnson",
     ],
 
-    director: "Joaquim Dos Santos",
+    director: ["Joaquim Dos Santos"],
 
     recommendation: [1, 2, 5],
   },
@@ -199,7 +199,7 @@ const movies = [
       "Eri Fukatsu",
     ],
 
-    director: "Makoto Shinkai",
+    director: ["Makoto Shinkai"],
 
     recommendation: [4, 6, 10],
   },
@@ -234,7 +234,7 @@ const movies = [
       "George Lopez",
     ],
 
-    director: "Carlos Saldanha",
+    director: ["Carlos Saldanha"],
 
     recommendation: [1, 5, 9],
   },
@@ -271,7 +271,7 @@ const movies = [
       "Bradley Cooper",
     ],
 
-    director: "James Gunn",
+    director: ["James Gunn"],
 
     recommendation: [3, 8, 12],
   },
@@ -306,7 +306,7 @@ const movies = [
       "Sarah Shahi",
     ],
 
-    director: "Jaume Collet-Serra",
+    director: ["Jaume Collet-Serra"],
 
     recommendation: [7, 12, 3],
   },
@@ -339,7 +339,7 @@ const movies = [
       "Ryan Potter",
     ],
 
-    director: "Don Hall",
+    director: ["Don Hall"],
 
     recommendation: [1, 6, 2],
   },
@@ -375,7 +375,7 @@ const movies = [
       "Javier Bardem",
     ],
 
-    director: "Rob Marshall",
+    director: ["Rob Marshall"],
 
     recommendation: [5, 6, 1],
   },
@@ -409,7 +409,7 @@ const movies = [
       "J.K. Simmons",
     ],
 
-    director: "Chris McKay",
+    director: ["Chris McKay"],
 
     recommendation: [3, 7, 12],
   },
@@ -446,10 +446,10 @@ const movies = [
       "Colin Farrell",
     ],
 
-    director: "Matt Reeves",
+    director: ["Matt Reeves"],
 
     recommendation: [8, 3, 7],
   },
 ];
   
-  export default movies;
+export default movies;

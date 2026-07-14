@@ -1,18 +1,63 @@
+import "./MoviePopup.css";
+
+import PopupHeader from "./PopupHeader";
+import PopupInfo from "./PopupInfo";
+import Recommendation from "./Recommendation";
+import EpisodeList from "./EpisodeList";
+
 function MoviePopup({ movie, onClose }) {
 
     if (!movie) return null;
 
     return (
-        <div className="movie-popup">
 
-            <button onClick={onClose}>
-                Close
-            </button>
+        <div
+            className="movie-popup"
+            onClick={onClose}
+        >
 
-            <h1>{movie.title}</h1>
+            <div
+                className="movie-popup__container"
+                onClick={(e) => e.stopPropagation()}
+            >
+
+                <PopupHeader
+                    movie={movie}
+                    onClose={onClose}
+                />
+
+                <PopupInfo
+                    movie={movie}
+                />
+
+                {
+
+                    movie.type === "movie"
+
+                        ? (
+
+                            <Recommendation
+                                recommendations={movie.recommendation}
+                            />
+
+                        )
+
+                        : (
+
+                            <EpisodeList
+                                episodes={movie.episodes}
+                            />
+
+                        )
+
+                }
+
+            </div>
 
         </div>
+
     );
+
 }
 
 export default MoviePopup;
