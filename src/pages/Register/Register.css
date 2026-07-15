@@ -1,120 +1,200 @@
 .register {
+
     min-height: 100vh;
 
     display: flex;
+
     justify-content: center;
+
     align-items: center;
 
     background-image: url("../../assets/images/bg-register.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+
 }
 
 .register__overlay {
+
     width: 100%;
+
     min-height: 100vh;
 
     display: flex;
+
     justify-content: center;
+
     align-items: center;
 
-    background: rgb(0, 0, 0, 0.55);
+    padding: clamp(16px, 3vw, 32px);
+
+    background: rgba(0, 0, 0, 0.55);
+
 }
 
 .register__card {
-    width: 529px;
-    max-width: 90%;
 
-    padding: 40px;
+    width: min(529px, 92vw);
+
+    padding: clamp(24px, 3vw, 40px);
 
     border-radius: 16px;
 
-    background: rgba(24, 26, 28, 0.712);
+    background: rgba(24, 26, 28, 0.72);
+
     backdrop-filter: blur(5px);
 
-    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+
 }
 
 .register__logo {
-    width: 140px;
+
+    width: clamp(110px, 18vw, 140px);
 
     display: block;
 
-    margin: 0 auto 15px;
+    margin: 0 auto 18px;
+
 }
 
 .register__title {
+
     display: flex;
-    flex-direction: column;
-    text-align: center;
+
     justify-content: center;
 
-    font-size: 32px;
+    text-align: center;
+
+    font-size: clamp(26px, 4vw, 32px);
 
     font-weight: 700;
+
 }
 
 .register__subtitle {
-    text-align: center;
+
     margin-top: 8px;
-    margin-bottom: 36px;
+
+    margin-bottom: clamp(24px, 3vw, 36px);
 
     text-align: center;
 
     color: #C1C2C4;
+
+    font-size: clamp(13px, 2vw, 16px);
+
 }
 
 .register__form {
+
     display: flex;
+
     flex-direction: column;
-    gap: 24px;
+
+    gap: clamp(18px, 2vw, 24px);
+
 }
 
 .register__helper {
-    margin: 20px 0;
+
+    margin: clamp(18px, 2vw, 24px) 0;
 
     display: flex;
-    justify-content: space-between;
+
+    justify-content: flex-start;
+
     align-items: center;
-    font-size: 14px;
+
+    font-size: clamp(12px, 2vw, 14px);
+
 }
 
 .register__helper p {
+
     color: #C1C2C4;
+
 }
 
 .register__helper p a {
-    color: white;
+
+    color: #FFFFFF;
+
+    text-decoration: none;
+
     font-weight: 600;
+
 }
 
-.register__helper a {
-    color: white;
-    transition: .25s;
-}
+.register__helper p a:hover {
 
-.register__helper a:hover {
     color: #3254FF;
-}
 
+}
 
 .register__action {
+
     display: flex;
+
     flex-direction: column;
+
     gap: 16px;
-}
 
-.register__action span {
-    text-align: center;
-
-    color: #9CA3AF;
 }
 
 .register__divider {
+
     text-align: center;
 
     color: #9CA3AF;
 
-    font-size: 1px;
+    font-size: 14px;
+
+}
+
+/* ===========================
+   TABLET
+=========================== */
+
+@media (max-width:768px) {
+
+    .register__helper {
+
+        justify-content: center;
+
+        text-align: center;
+
+    }
+
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media (max-width:480px) {
+
+    .register__overlay {
+
+        padding: 16px;
+
+    }
+
+    .register__card {
+
+        width: 100%;
+
+        padding: 24px;
+
+        border-radius: 12px;
+
+    }
+
+    .register__action {
+
+        gap: 14px;
+
+    }
+
 }

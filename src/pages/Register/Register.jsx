@@ -24,11 +24,11 @@ function Register(){
                     />
 
                     <h1 className="register__title">
-                        Masuk
+                        Daftar
                     </h1>
 
                     <p className="register__subtitle">
-                        Selamat datang kembali!
+                    Selamat datang!
                     </p>
 
                     <form className="register__form">
@@ -66,7 +66,7 @@ function Register(){
                     <div className="register__action">
                         
                         <Button>
-                            Masuk
+                            Daftar
                         </Button>
 
                         <p className="register__divider">

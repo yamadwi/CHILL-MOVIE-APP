@@ -15,6 +15,7 @@
     width: min(900px, 100%);
     max-height: 90vh;
     overflow-y: auto;
+    overflow-x: hidden;
     scrollbar-width: none;
     -ms-overflow-style: none;
     background: #181A1C;
@@ -225,6 +226,10 @@
 
     gap: 48px;
 
+    width: 100%;
+
+    min-width: 0;
+
 }
 
 .movie-popup__left {
@@ -232,6 +237,8 @@
     flex: 1;
 
     max-width: 470px;
+
+    min-width: 0;
 
 }
 
@@ -248,7 +255,7 @@
 .movie-popup__right {
 
     width: 280px;
-
+    min-width: 0;
     display: flex;
 
     flex-direction: column;
@@ -286,6 +293,16 @@
     font-size: 14px;
 
     line-height: 1.6;
+
+    white-space: normal;
+
+    overflow-wrap: anywhere;
+
+    word-break: break-word;
+
+    width: 100%;
+
+    min-width: 0;
 
 }
 
@@ -448,5 +465,313 @@
     font-size: 14px;
 
     line-height: 1.6;
+
+}
+
+/* ===========================
+   TABLET
+=========================== */
+
+@media (max-width: 768px) {
+
+    .movie-popup {
+
+        padding: 20px;
+
+    }
+
+    .movie-popup__header {
+
+        height: 340px;
+
+    }
+
+    .movie-popup__hero {
+
+        left: 24px;
+        right: 24px;
+        bottom: 24px;
+
+    }
+
+    .movie-popup__title {
+
+        font-size: 34px;
+
+    }
+
+    .movie-popup__content,
+    .movie-popup__recommendation,
+    .movie-popup__episode {
+
+        padding-left: 24px;
+        padding-right: 24px;
+
+    }
+
+    .movie-popup__bottom {
+
+        flex-direction: column;
+
+        gap: 28px;
+
+    }
+
+    .movie-popup__left {
+
+        max-width: 100%;
+
+    }
+
+    .movie-popup__right {
+
+        width: 100%;
+        min-width: 0;
+
+    }
+
+    .movie-popup__recommendation-list {
+
+        overflow-x: auto;
+
+        scrollbar-width: none;
+
+    }
+
+    .movie-popup__recommendation-list::-webkit-scrollbar {
+
+        display: none;
+
+    }
+
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media (max-width:480px) {
+
+    .movie-popup {
+
+        padding: 8px;
+    }
+
+    .movie-popup__container {
+
+        width: 100%;
+        max-width: 100%;
+        max-height: 96vh;
+        border-radius: 12px;
+        overflow-x: hidden;
+    }
+
+    /* ================= HEADER ================= */
+
+    .movie-popup__header {
+
+        height: 180px;
+    }
+
+    .movie-popup__hero {
+
+        left: 16px;
+        right: 16px;
+        bottom: 14px;
+    }
+
+    .movie-popup__title {
+
+        font-size: 18px;
+        margin-bottom: 14px;
+    }
+
+    .movie-popup__actions {
+
+        gap: 8px;
+    }
+
+    .movie-popup__play {
+
+        width: 90px;
+        height: 34px;
+        font-size: 12px;
+    }
+
+    .movie-popup__check {
+
+        width: 34px;
+        height: 34px;
+    }
+
+    .movie-popup__close {
+
+        width: 34px;
+        height: 34px;
+        top: 10px;
+        right: 10px;
+    }
+
+    /* ================= CONTENT ================= */
+
+    .movie-popup__content {
+
+        padding: 14px 16px;
+    }
+
+    .movie-popup__info {
+
+        margin-bottom: 14px;
+        gap: 8px;
+        font-size: 12px;
+    }
+
+    .movie-popup__age {
+
+        font-size: 12px;
+    }
+
+    .movie-popup__duration {
+
+        font-size: 12px;
+    }
+
+    /* ubah layout jadi 1 kolom */
+
+    .movie-popup__bottom {
+    
+        display: flex;
+    
+        flex-direction: column;
+    
+        gap: 18px;   
+    }
+
+    .movie-popup__left {
+
+        max-width: 100%;
+        margin-bottom: 18px;
+    }
+
+    .movie-popup__right {
+
+        width: 100%;
+        min-width: 0;
+    }
+
+    .movie-popup__description {
+
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    .movie-popup__detail-row {
+
+        display: block;
+        margin-bottom: 12px;
+    }
+
+    .movie-popup__label {
+
+        display: block;
+        width: auto;
+        margin-bottom: 4px;
+        font-size: 12px;
+    }
+
+    .movie-popup__value {
+
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    /* ================= RECOMMENDATION ================= */
+
+    .movie-popup__recommendation {
+
+        padding: 0 16px 18px;
+    }
+
+    .movie-popup__section-title {
+
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+
+    .movie-popup__recommendation-list {
+    
+        display: flex;
+    
+        flex-wrap: nowrap;
+    
+        gap: 10px;
+    
+        width: 100%;
+    
+        overflow-x: auto;
+    
+        overflow-y: hidden;
+    
+        scrollbar-width: none;   
+    }
+
+    .movie-popup__recommendation-list::-webkit-scrollbar {
+
+        display: none;
+    }
+
+    .movie-popup__recommendation-list .movie-card {
+
+        flex: 0 0 95px;
+        
+        width: 95px;
+    }
+
+    /* ================= EPISODE ================= */
+
+    .movie-popup__episode {
+
+        padding: 0 16px 18px;
+    }
+
+    .movie-popup__episode-item {
+
+        gap: 10px;
+        padding: 10px 0;
+    }
+
+    .movie-popup__episode-number {
+
+        display: none;
+    }
+
+    .movie-popup__episode-thumbnail {
+
+        width: 95px;
+        height: 55px;
+        flex-shrink: 0;
+    }
+
+    .movie-popup__episode-header {
+
+        display: block;
+    }
+
+    .movie-popup__episode-header h4 {
+
+        font-size: 13px;
+        margin-bottom: 4px;
+    }
+
+    .movie-popup__episode-duration {
+
+        font-size: 11px;
+    }
+
+    .movie-popup__episode-content p {
+
+        font-size: 12px;
+        line-height: 1.5;
+    }
 
 }

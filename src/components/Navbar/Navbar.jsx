@@ -2,14 +2,19 @@ import "./Navbar.css";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
-import Logo from "../../assets/icons/logo-full.svg";
+import LogoFull from "../../assets/icons/logo-full.svg";
+import LogoIcon from "../../assets/icons/logo.svg";
 import Avatar from "../../assets/images/avatar.jpg";
 import ArrowDown from "../../assets/icons/chevron-down.svg";
 import ProfileIcon from "../../assets/icons/icon-person.svg";
 import StarIcon from "../../assets/icons/star-icon.svg";
-import LogoutIcon from "../../assets/icons/logout-icon.svg"
+import LogoutIcon from "../../assets/icons/logout-icon.svg";
+import useResponsive from "../../hooks/useResponsive"
 
 function Navbar() {
+
+  const { isMobile } = useResponsive();
+
   const[isOpen, setIsOpen] = useState(false);
 
   return (
@@ -19,7 +24,7 @@ function Navbar() {
 
         <Link to="/">
           <img 
-            src={Logo} 
+            src={isMobile ? LogoIcon : LogoFull} 
             alt="CHILL"
             className="navbar__logo" 
             />

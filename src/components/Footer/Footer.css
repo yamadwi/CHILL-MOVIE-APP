@@ -1,0 +1,329 @@
+.footer {
+
+    margin-top: 80px;
+
+    padding: 48px 80px;
+
+    border-top: 1px solid #2F3334;
+
+    background: #181A1C;
+
+}
+
+.footer__container {
+
+    max-width: 1440px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: 1.2fr 2fr 1fr;
+
+    gap: 80px;
+
+    align-items: start;
+
+}
+
+/* ===========================
+   BRAND
+=========================== */
+
+.footer__brand {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+
+}
+
+.footer__logo {
+
+    width: 140px;
+
+    object-fit: contain;
+
+}
+
+.footer__copyright {
+
+    color: #9CA3AF;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+}
+
+/* ===========================
+   TITLE
+=========================== */
+
+.footer__title {
+
+    color: #FFFFFF;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    margin-bottom: 18px;
+
+}
+
+/* ===========================
+   GENRE
+=========================== */
+
+.footer__genre-list {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, max-content);
+
+    column-gap: 32px;
+
+    row-gap: 14px;
+
+}
+
+/* ===========================
+   HELP
+=========================== */
+
+.footer__help-list {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 14px;
+
+}
+
+/* ===========================
+   LINK
+=========================== */
+
+.footer__link {
+
+    color: #9CA3AF;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    transition: color .2s ease;
+
+}
+
+.footer__link:hover {
+
+    color: #FFFFFF;
+
+}
+
+/* ===========================
+   TABLET
+=========================== */
+
+@media (max-width:768px) {
+
+    .footer {
+
+        padding: 40px 24px;
+
+    }
+
+    .footer__container {
+
+        grid-template-columns: 1fr;
+
+        gap: 36px;
+
+    }
+
+    .footer__genre-list {
+
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        column-gap: 20px;
+
+        row-gap: 12px;
+
+    }
+
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media (max-width:480px) {
+
+    .footer {
+
+        margin-top: 48px;
+
+        padding: 28px 16px;
+
+    }
+
+    .footer__container {
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 28px;
+
+    }
+
+    .footer__genre,
+    .footer__help {
+    
+        width: 100%;
+    }
+
+    .footer__logo {
+
+        width: 110px;
+
+    }
+
+    .footer__copyright {
+
+        font-size: 12px;
+
+    }
+
+    .footer__genre-list {
+
+        grid-template-columns: 1fr;
+
+        gap: 10px;
+
+    }
+
+    .footer__help-list {
+
+        gap: 10px;
+
+    }
+
+    .footer__title {
+
+        margin-bottom: 12px;
+
+    }
+
+}
+
+.footer__link {
+
+    word-break: break-word;
+}
+
+/* ===========================
+   ACCORDION
+=========================== */
+
+.footer__accordion {
+
+    display: none;
+
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media (max-width:480px) {
+
+    .footer__title {
+
+        display: none;
+
+    }
+
+    .footer__accordion {
+    
+        width: 100%;
+    
+        display: flex;
+    
+        justify-content: space-between;
+    
+        align-items: center;
+    
+        padding: 14px 0;
+    
+        border: none;
+    
+        background: none;
+    
+        color: #FFF;
+    
+        cursor: pointer;
+
+        gap: 12px;
+    }
+
+    .footer__accordion-title {
+    
+        flex: 1;
+    
+        text-align: left;   
+    }
+
+    .footer__arrow {
+    
+        width: 20px;
+    
+        height: 20px;
+    
+        object-fit: contain;
+    
+        transition: transform .25s ease;
+    
+        transform: rotate(-90deg);
+    }
+
+    .footer__arrow--open {
+
+        transform: rotate(0deg);
+
+    }
+
+    .footer__genre-list,
+
+    .footer__help-list {
+
+        max-height: 0;
+
+        overflow: hidden;
+
+        transition: max-height .3s ease;
+
+    }
+
+    .footer__genre-list--open {
+
+        max-height: 500px;
+
+        margin-top: 12px;
+
+    }
+
+    .footer__help-list--open {
+
+        max-height: 250px;
+
+        margin-top: 12px;
+
+    }
+
+}

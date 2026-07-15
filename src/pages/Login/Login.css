@@ -14,70 +14,57 @@
 .login__overlay{
     width: 100%;
     min-height: 100vh;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
+    padding: clamp(16px, 3vw, 32px);
     background: rgb(0, 0, 0, 0.55);
 }
 
 .login__card{
-    width: 529px;
-    max-width: 90%;
-
-    padding: 40px;
-
-    border-radius: 16px;
-
-    background: rgba(24, 26, 28, 0.712);
-    backdrop-filter: blur(5px);
-
-    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.35);
+    width: min(529px, 92vw);
+    padding: clamp(24px, 3vw, 40px);   
+    border-radius: 16px;    
+    background: rgba(24, 26, 28, 0.72);    
+    backdrop-filter: blur(5px);    
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
 }
 
-.login__logo{
-    width: 140px;
-
+.login__logo {
+    width: clamp(110px, 18vw, 140px);
     display: block;
-
-    margin: 0 auto 15px;
+    margin: 0 auto 18px;
 }
 
-.login__title{
+.login__title {
     display: flex;
-    flex-direction: column;
-    text-align: center;
     justify-content: center;
-
-    font-size: 32px;
-
+    font-size: clamp(26px, 4vw, 32px);
     font-weight: 700;
+    text-align: center;
 }
 
-.login__subtitle{
-    text-align: center;
+.login__subtitle {
     margin-top: 8px;
-    margin-bottom: 36px;
-
+    margin-bottom: clamp(24px, 3vw, 36px);
     text-align: center;
-
     color: #C1C2C4;
+    font-size: clamp(13px, 2vw, 16px);
 }
 
-.login__form{
+.login__form {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: clamp(18px, 2vw, 24px);
 }
 
-.login__helper{
-    margin: 20px 0;
-
+.login__helper {
+    margin: clamp(18px, 2vw, 24px) 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 14px;
+    gap: 12px;
+    font-size: clamp(12px, 2vw, 14px);
 }
 
 .login__helper p{
@@ -87,10 +74,12 @@
 .login__helper p a{
     color: white;
     font-weight: 600;
+    text-decoration: none;
 }
 
 .login__helper a{
     color: white;
+    text-decoration: none;
     transition: .25s;
 }
 
@@ -106,15 +95,64 @@
 }
 
 .login__action span {
-    text-align: center;
-    
+    text-align: center; 
     color: #9CA3AF;
 }
 
 .login__divider {
     text-align: center;
-
     color: #9CA3AF;
+    font-size: 14px;
+}
 
-    font-size: 1px;
+/* ===========================
+   TABLET
+=========================== */
+
+@media (max-width:768px) {
+
+    .login__helper {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+    }
+
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media (max-width:480px) {
+
+    .login__overlay {
+
+        padding: 16px;
+
+    }
+
+    .login__card {
+
+        width: 100%;
+
+        padding: 24px;
+
+        border-radius: 12px;
+
+    }
+
+    .login__helper {
+
+        gap: 10px;
+
+    }
+
+    .login__action {
+
+        gap: 14px;
+
+    }
+
 }

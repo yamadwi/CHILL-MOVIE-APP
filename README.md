@@ -1,16 +1,146 @@
-# React + Vite
+# 🎬 CHILL Movie App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+CHILL Movie App adalah aplikasi streaming film berbasis React yang terinspirasi dari platform seperti Netflix dan Disney+. Project ini dibuat sebagai tugas Bootcamp Full Stack Developer HariSenin dengan fokus pada pembuatan antarmuka modern, reusable component, dan responsive design.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Features
 
-## React Compiler
+- 🔐 Login Page
+- 📝 Register Page
+- 🏠 Homepage
+- 🎞 Hero Banner
+- 🎬 Movie & Series Sections
+- 🎠 Horizontal Carousel
+- 🎥 Movie & Series Detail Popup
+- 📺 Episode List
+- 🎯 Recommendation Section
+- 📱 Fully Responsive Design
+- 🎨 Modern UI Design
+- 🧩 Reusable React Components
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠 Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React
+- Vite
+- React Responsive
+- CSS3
+- JavaScript (ES6)
+
+---
+
+## 📂 Folder Structure
+
+```text
+src
+│
+├── assets
+│
+├── components
+│   ├── Button
+│   ├── Card
+│   ├── Carousel
+│   ├── EpisodeList
+│   ├── Footer
+│   ├── Hero
+│   ├── MoviePopup
+│   ├── Navbar
+│   ├── Recommendation
+│   └── ...
+│
+├── data
+│   ├── movies.js
+│   └── series.js
+│
+├── pages
+│   ├── Home
+│   ├── Login
+│   └── Register
+│
+├── App.jsx
+└── main.jsx
+```
+
+---
+
+## 📱 Responsive
+
+This project is fully responsive and optimized for:
+
+- 💻 Desktop
+- 📱 Mobile (375px)
+
+Responsive implementation uses:
+
+- react-responsive
+- CSS Media Query
+
+---
+
+## 🚀 Getting Started
+
+Clone this repository
+
+```bash
+git clone https://github.com/yamadwi/CHILL-MOVIE-APP.git
+```
+
+Go to the project folder
+
+```bash
+cd CHILL-MOVIE-APP
+```
+
+Install dependencies
+
+```bash
+npm install
+```
+
+Run development server
+
+```bash
+npm run dev
+```
+
+---
+
+## 📸 Preview
+
+### Login Page
+
+![Login] (./src/assets/readme/login.png)
+
+### Register Page
+
+> Add screenshot here
+
+### Homepage
+
+> Add screenshot here
+
+### Movie Detail Popup
+
+> Add screenshot here
+
+### Responsive Mobile
+
+> Add screenshot here
+
+---
+
+## 👨‍💻 Author
+
+**Yama Dwi Yulianto**
+
+- GitHub : https://github.com/yamadwi
+
+---
+
+## 🙏 Acknowledgements
+
+This project was developed as part of the **HariSenin Full Stack Developer Bootcamp**.
+
+The UI design is inspired by modern streaming platforms such as **Netflix** and **Disney+**, and was created solely for educational purposes.

@@ -1,12 +1,15 @@
 import { useState } from "react";
 
-import "./Home.css"
+import "./Home.css";
 
 import Navbar from "../../components/Navbar/Navbar";
 import Hero from "../../features/home/Hero/Hero";
 import MovieSection from "../../features/home/MovieSection/MovieSection";
 import MoviePreview from "../../components/MoviePreview/MoviePreview";
 import MoviePopup from "../../components/MoviePopup/MoviePopup";
+import Footer from "../../components/Footer/Footer";
+
+import useResponsive from "../../hooks/useResponsive";
 
 import {
     continueWatching,
@@ -16,13 +19,24 @@ import {
     newRelease,
 } from "../../data/homeSections";
 
-function Home(){
+function Home() {
+
+    const { isMobile } = useResponsive();
 
     const [preview, setPreview] = useState(null);
     const [popupMovie, setPopupMovie] = useState(null);
 
     const handlePreview = (movie, rect) => {
 
+        // MOBILE
+        if (isMobile) {
+
+            setPopupMovie(movie);
+            return;
+
+        }
+
+        // DESKTOP
         setPreview({
             movie,
             rect,
@@ -36,7 +50,7 @@ function Home(){
 
     };
 
-    const handleOpenPoup = () => {
+    const handleOpenPopup = () => {
 
         if (!preview) return;
 
@@ -51,7 +65,7 @@ function Home(){
 
     };
 
-    return(
+    return (
 
         <>
 
@@ -98,13 +112,13 @@ function Home(){
 
             </main>
 
-            {preview && (
+            {!isMobile && preview && (
 
                 <MoviePreview
                     movie={preview.movie}
                     rect={preview.rect}
                     onClose={handleClosePreview}
-                    onOpen={handleOpenPoup}
+                    onOpen={handleOpenPopup}
                 />
 
             )}
@@ -113,6 +127,8 @@ function Home(){
                 movie={popupMovie}
                 onClose={handleClosePopup}
             />
+
+            <Footer />
 
         </>
 
