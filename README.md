@@ -111,7 +111,7 @@ npm run dev
 
 ### Login Page
 
-![Login] (./src/assets/readme/login.png)
+![Login] (src/assets/readme/login.png)
 
 ### Register Page
 
