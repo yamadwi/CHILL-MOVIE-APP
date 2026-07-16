@@ -1,27 +1,27 @@
-# 🎬 CHILL Movie App
+# CHILL Movie App
 
 CHILL Movie App adalah aplikasi streaming film berbasis React yang terinspirasi dari platform seperti Netflix dan Disney+. Project ini dibuat sebagai tugas Bootcamp Full Stack Developer HariSenin dengan fokus pada pembuatan antarmuka modern, reusable component, dan responsive design.
 
 ---
 
-## ✨ Features
+## Features
 
-- 🔐 Login Page
-- 📝 Register Page
-- 🏠 Homepage
-- 🎞 Hero Banner
-- 🎬 Movie & Series Sections
-- 🎠 Horizontal Carousel
-- 🎥 Movie & Series Detail Popup
-- 📺 Episode List
-- 🎯 Recommendation Section
-- 📱 Fully Responsive Design
-- 🎨 Modern UI Design
-- 🧩 Reusable React Components
+- Login Page
+- Register Page
+- Homepage
+- Hero Banner
+- Movie & Series Sections
+- Horizontal Carousel
+- Movie & Series Detail Popup
+- Episode List
+- Recommendation Section
+- Fully Responsive Design
+- Modern UI Design
+- Reusable React Components
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 - React
 - Vite
@@ -31,7 +31,7 @@ CHILL Movie App adalah aplikasi streaming film berbasis React yang terinspirasi 
 
 ---
 
-## 📂 Folder Structure
+## Folder Structure
 
 ```text
 src
@@ -51,14 +51,13 @@ src
 │   └── Navbar
 │
 ├── data
-│   ├── movies.js
-│   └── series.js
 │
 ├── features
 │   └── home
 │       └── Hero
 │       └── MovieSection
-│           └── series.js
+│
+├── hooks
 │
 ├── pages
 │   ├── Home
@@ -66,7 +65,6 @@ src
 │   └── Register
 │
 ├── styles
-│   └── Global.css
 │
 ├── App.jsx
 └── main.jsx
@@ -74,12 +72,12 @@ src
 
 ---
 
-## 📱 Responsive
+## Responsive
 
 This project is fully responsive and optimized for:
 
-- 💻 Desktop
-- 📱 Mobile (375px)
+- Desktop
+- Mobile (375px)
 
 Responsive implementation uses:
 
@@ -88,7 +86,7 @@ Responsive implementation uses:
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 Clone this repository
 
@@ -116,7 +114,7 @@ npm run dev
 
 ---
 
-## 📸 Preview
+## Preview
 
 ### Login Page
 
@@ -156,7 +154,7 @@ npm run dev
 
 ---
 
-## 👨‍💻 Author
+## Author
 
 **Yama Dwi Yulianto**
 
@@ -164,7 +162,7 @@ npm run dev
 
 ---
 
-## 🙏 Acknowledgements
+## Acknowledgements
 
 This project was developed as part of the **HariSenin Full Stack Developer Bootcamp**.
 
