@@ -126,19 +126,27 @@ npm run dev
 
 ### Register Page
 
-> Add screenshot here
+| Desktop                               | Mobile                                           |
+| ------------------------------------- | ------------------------------------------------ |
+| ![](./src/assets/readme/register.png) | ![](./src/assets/readme/register-responsive.png) |
 
 ### Homepage
 
-> Add screenshot here
+| Desktop                            | Mobile                                        |
+| ---------------------------------- | --------------------------------------------- |
+| ![](./src/assets/readme/login.png) | ![](./src/assets/readme/login-responsive.png) |
 
 ### Movie Detail Popup
 
-> Add screenshot here
+| Desktop                            | Mobile                                        |
+| ---------------------------------- | --------------------------------------------- |
+| ![](./src/assets/readme/login.png) | ![](./src/assets/readme/login-responsive.png) |
 
 ### Responsive Mobile
 
-> Add screenshot here
+| Desktop                            | Mobile                                        |
+| ---------------------------------- | --------------------------------------------- |
+| ![](./src/assets/readme/login.png) | ![](./src/assets/readme/login-responsive.png) |
 
 ---
 
