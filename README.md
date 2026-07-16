@@ -132,21 +132,27 @@ npm run dev
 
 ### Homepage
 
-| Desktop                            | Mobile                                        |
-| ---------------------------------- | --------------------------------------------- |
-| ![](./src/assets/readme/login.png) | ![](./src/assets/readme/login-responsive.png) |
+| Desktop                               | Mobile                                           |
+| ------------------------------------- | ------------------------------------------------ |
+| ![](./src/assets/readme/homepage.png) | ![](./src/assets/readme/homepage-responsive.png) |
+
+### Hover Movie And Series
+
+| Movie                                   | Series                                    |
+| --------------------------------------- | ----------------------------------------- |
+| ![](./src/assets/readme/hover-film.png) | ![](./src/assets/readme/hover-series.png) |
 
 ### Movie Detail Popup
 
-| Desktop                            | Mobile                                        |
-| ---------------------------------- | --------------------------------------------- |
-| ![](./src/assets/readme/login.png) | ![](./src/assets/readme/login-responsive.png) |
+| Desktop                                 | Mobile                                             |
+| --------------------------------------- | -------------------------------------------------- |
+| ![](./src/assets/readme/popup-film.png) | ![](./src/assets/readme/popup-film-responsive.png) |
 
-### Responsive Mobile
+### Series Detail Popup
 
-| Desktop                            | Mobile                                        |
-| ---------------------------------- | --------------------------------------------- |
-| ![](./src/assets/readme/login.png) | ![](./src/assets/readme/login-responsive.png) |
+| Desktop                                   | Mobile                                               |
+| ----------------------------------------- | ---------------------------------------------------- |
+| ![](./src/assets/readme/popup-series.png) | ![](./src/assets/readme/popup-series-responsive.png) |
 
 ---
 
