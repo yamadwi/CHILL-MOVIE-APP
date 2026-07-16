@@ -120,7 +120,7 @@ npm run dev
 
 ### Login Page
 
-![](./src/assets/eadme/login.png)
+![](./src/assets/readme/login.png)
 
 ### Register Page
 
