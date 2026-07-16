@@ -120,8 +120,9 @@ npm run dev
 
 ### Login Page
 
-![login](./src/assets/readme/login.png)
-![login-responsive](./src/assets/readme/login-responsive.png)
+| Desktop                            | Mobile                                        |
+| ---------------------------------- | --------------------------------------------- |
+| ![](./src/assets/readme/login.png) | ![](./src/assets/readme/login-responsive.png) |
 
 ### Register Page
 
