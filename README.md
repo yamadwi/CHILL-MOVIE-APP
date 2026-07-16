@@ -37,27 +37,36 @@ CHILL Movie App adalah aplikasi streaming film berbasis React yang terinspirasi 
 src
 │
 ├── assets
+│   ├── icons
+│   ├── images
+│   └── readme
 │
 ├── components
 │   ├── Button
-│   ├── Card
-│   ├── Carousel
-│   ├── EpisodeList
 │   ├── Footer
-│   ├── Hero
+│   ├── Input
+│   ├── MovieCard
 │   ├── MoviePopup
-│   ├── Navbar
-│   ├── Recommendation
-│   └── ...
+│   ├── MoviePreview
+│   └── Navbar
 │
 ├── data
 │   ├── movies.js
 │   └── series.js
 │
+├── features
+│   └── home
+│       └── Hero
+│       └── MovieSection
+│           └── series.js
+│
 ├── pages
 │   ├── Home
 │   ├── Login
 │   └── Register
+│
+├── styles
+│   └── Global.css
 │
 ├── App.jsx
 └── main.jsx
@@ -111,7 +120,7 @@ npm run dev
 
 ### Login Page
 
-![Login](src\assets\readme\login.png)
+![](src\assets\readme\login.png)
 
 ### Register Page
 
