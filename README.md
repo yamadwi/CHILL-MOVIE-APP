@@ -159,11 +159,3 @@ npm run dev
 **Yama Dwi Yulianto**
 
 - GitHub : https://github.com/yamadwi
-
----
-
-## Acknowledgements
-
-This project was developed as part of the **HariSenin Full Stack Developer Bootcamp**.
-
-The UI design is inspired by modern streaming platforms such as **Netflix** and **Disney+**, and was created solely for educational purposes.
