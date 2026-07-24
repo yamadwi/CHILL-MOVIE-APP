@@ -19,7 +19,7 @@ import {
     newRelease,
 } from "../../data/homeSections";
 
-function Home() {
+function Home({favorites, toggleFavorite}) {
 
     const { isMobile } = useResponsive();
 
@@ -119,6 +119,8 @@ function Home() {
                     rect={preview.rect}
                     onClose={handleClosePreview}
                     onOpen={handleOpenPopup}
+                    favorites={favorites}
+                    toggleFavorite={toggleFavorite}
                 />
 
             )}
@@ -126,6 +128,8 @@ function Home() {
             <MoviePopup
                 movie={popupMovie}
                 onClose={handleClosePopup}
+                favorites={favorites}
+                toggleFavorite={toggleFavorite}
             />
 
             <Footer />

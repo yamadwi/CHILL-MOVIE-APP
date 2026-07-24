@@ -1,9 +1,19 @@
 import "./MoviePopup.css";
 
+import PlusIcon from "../../assets/icons/plus-icon.svg";
 import CheckIcon from "../../assets/icons/check-icon.svg";
 import CloseIcon from "../../assets/icons/close.svg";
 
-function PopupHeader({ movie, onClose }) {
+function PopupHeader({ 
+    movie, 
+    onClose,
+    favorites,
+    toggleFavorite, 
+}) {
+
+    const isFavorite = favorites.some(
+        (item) => item.id === movie.id
+    );
 
     return (
 
@@ -41,11 +51,14 @@ function PopupHeader({ movie, onClose }) {
                         Mulai
                     </button>
 
-                    <button className="movie-popup__check">
+                    <button 
+                        className="movie-popup__check"
+                        onClick={() => toggleFavorite(movie)}
+                    >
 
                         <img
-                            src={CheckIcon}
-                            alt="My List"
+                            src={isFavorite ? CheckIcon :  PlusIcon}
+                            alt={isFavorite ? "Hapus Dari Daftar Saya" : "Tambah Ke Daftar Saya"}
                         />
 
                     </button>

@@ -5,7 +5,12 @@ import PopupInfo from "./PopupInfo";
 import Recommendation from "./Recommendation";
 import EpisodeList from "./EpisodeList";
 
-function MoviePopup({ movie, onClose }) {
+function MoviePopup({ 
+    movie, 
+    onClose,
+    favorites,
+    toggleFavorite, 
+}) {
 
     if (!movie) return null;
 
@@ -24,6 +29,8 @@ function MoviePopup({ movie, onClose }) {
                 <PopupHeader
                     movie={movie}
                     onClose={onClose}
+                    favorites={favorites}
+                    toggleFavorite={toggleFavorite}
                 />
 
                 <PopupInfo

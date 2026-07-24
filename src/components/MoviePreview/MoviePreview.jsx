@@ -1,6 +1,7 @@
 import "./MoviePreview.css"
 
 import PlayIcon from"../../assets/icons/play-circle.svg"
+import PlusIcon from "../../assets/icons/plus-icon.svg";
 import CheckIcon from"../../assets/icons/check-icon.svg"
 import ChevronDownIcon from"../../assets/icons/chevron-down.svg"
 
@@ -9,9 +10,15 @@ function MoviePreview({
     rect,
     onClose,
     onOpen,
+    favorites,
+    toggleFavorite,
 }) {
 
     if (!movie || !rect) return null;
+
+    const isFavorite = favorites.some(
+        (item) => item.id === movie.id
+    );
 
     const PREVIEW_WIDTH = 250;
     const PREVIEW_HEIGHT = 250;
@@ -61,11 +68,14 @@ function MoviePreview({
 
                             </button>
 
-                            <button className="movie-preview__button">
+                            <button 
+                                className="movie-preview__button"
+                                onClick={() => toggleFavorite(movie)}
+                            >
 
                                 <img
-                                    src={CheckIcon}
-                                    alt="Check Icon"
+                                    src={isFavorite ? CheckIcon : PlusIcon}
+                                    alt={isFavorite ? "Hapus Dari Daftar Saya" : "Tambah Ke Daftar Saya"}
                                 />
 
                             </button>
