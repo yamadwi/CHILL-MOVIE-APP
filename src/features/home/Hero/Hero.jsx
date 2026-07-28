@@ -4,14 +4,19 @@ import InformationOutline from "../../../assets/icons/information-outline.svg";
 import VolumeOff from "../../../assets/icons/volume-off.svg"
 
 import Button from "../../../components/Button/Button";
+import GenreDropDown from "../../../components/GenreDropDown/GenreDropDown";
 
-function Hero(){
+function Hero({ shownGenre = false }){
     return(
         <section className="hero">
 
             <div className="hero__overlay">
 
                 <div className="hero__content">
+
+                    {shownGenre &&(
+                        <GenreDropDown/>
+                    )}
 
                     <h1 className="hero__title">
                         Duty After School
@@ -24,6 +29,7 @@ function Hero(){
                     </p>
 
                     <div className="hero__action">
+                        
                         <Button className="hero__play">
                             Mulai
                         </Button>
