@@ -4,11 +4,14 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import Login from "./pages/Login/Login";
 import Register from "./pages/Register/Register";
+import MyList from "./pages/MyList/MyList";
 
 function App() {
 
     const[favorites, setFavorites] = useState([]);
+
     const toggleFavorite = (movie) => {
+
         const isFavorite = favorites.some(
             (item) => item.id === movie.id
         );
@@ -36,6 +39,16 @@ function App() {
                     <Home 
                         favorites={favorites}
                         toggleFavorite={toggleFavorite}    
+                    />
+                }
+            />
+        
+            <Route
+                path="/my-list"
+                element={
+                    <MyList
+                        favorites={favorites}
+                        toggleFavorite={toggleFavorite}
                     />
                 }
             />

@@ -1,0 +1,43 @@
+.movie-grid {
+
+    display: grid;
+    
+    grid-template-columns: repeat(auto-fill, minmax(150px, max-content));
+    
+    justify-content: start;
+    
+    gap: 20px;
+
+}
+
+/* ===========================
+   TABLET
+=========================== */
+
+@media (max-width:768px) {
+
+    .movie-grid {
+
+        grid-template-columns: repeat(auto-fill, minmax(140px, max-content));
+
+        gap: 16px;
+
+    }
+
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media (max-width:480px) {
+
+    .movie-grid {
+
+        grid-template-columns: repeat(auto-fill, minmax(90px, max-content));
+
+        gap: 12px;
+
+    }
+
+}

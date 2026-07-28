@@ -17,6 +17,8 @@ function MovieSection ({
 
     const scroll = (direction) => {
 
+        if (!movieListRef.current) return;
+
         movieListRef.current.scrollBy({
             left: direction * 500,
             behavior: "smooth",
