@@ -82,6 +82,17 @@ function Home({favorites, toggleFavorite}) {
                     onPreview={handlePreview}
                 />
 
+                {favorites.length > 0 && (
+
+                    <MovieSection
+                        title="Daftar Saya"
+                        items={favorites}
+                        variant="portrait"
+                        onPreview={handlePreview}
+                    />
+                
+                )}
+
                 <MovieSection
                     title="Film Persembahan Chill"
                     items={chillOriginal}

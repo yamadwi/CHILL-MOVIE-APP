@@ -72,12 +72,28 @@ function MyList({
 
                     </h1>
 
-                    <MovieGrid
-                        title=""
-                        items={favorites}
-                        variant="portrait"
-                        onPreview={handlePreview}
-                    />
+                    {favorites.length > 0 ?(
+
+                        <MovieGrid
+                            title=""
+                            items={favorites}
+                            variant="portrait"
+                            onPreview={handlePreview}
+                        />
+
+                    ) : (
+
+                        <div className="my-list__empty">
+                            <h2 className="my-list__empty-title">
+                                Daftar Saya masih kosong
+                            </h2>
+
+                            <p className="my-list__empty-description">
+                                Tambahkan film atau series ke daftar favoritmu.
+                            </p>
+                        </div>
+
+                    )}
 
                 </div>
 
