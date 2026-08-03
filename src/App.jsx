@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 
 import Home from "./pages/Home/Home";
+import Film from "./pages/Film/Film";
+import Series from "./pages/Series/Series";
 import Login from "./pages/Login/Login";
 import Register from "./pages/Register/Register";
 import MyList from "./pages/MyList/MyList";
@@ -29,6 +31,7 @@ function App() {
                 movie,
             ]);
         }
+        
     };
 
     return (
@@ -37,6 +40,26 @@ function App() {
                 path="/"
                 element={
                     <Home 
+                        favorites={favorites}
+                        toggleFavorite={toggleFavorite}    
+                    />
+                }
+            />
+
+            <Route
+                path="/film"
+                element={
+                    <Film 
+                        favorites={favorites}
+                        toggleFavorite={toggleFavorite}    
+                    />
+                }
+            />
+
+            <Route
+                path="/series"
+                element={
+                    <Series 
                         favorites={favorites}
                         toggleFavorite={toggleFavorite}    
                     />

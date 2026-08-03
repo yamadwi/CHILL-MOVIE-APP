@@ -4,7 +4,7 @@
 
     display: inline-block;
 
-    margin-bottom: 24px;
+    margin-bottom: 170px;
 
 }
 
@@ -14,39 +14,49 @@
 
     align-items: center;
 
+    justify-content: center;
+
     gap: 8px;
 
-    padding: 10px 16px;
+    width: 94px;
+
+    height: 40px;
+
+    padding: 0 16px;
 
     border: none;
 
-    border-radius: 24px;
+    border-radius: 9999px;
 
-    background: rgba(0, 0, 0, .55);
+    background: rgba(34, 40, 43, .9);
 
     color: #FFFFFF;
 
-    font-size: 16px;
+    font-size: 14px;
 
     font-weight: 500;
 
+    line-height: 1;
+
     cursor: pointer;
 
-    transition: .25s;
+    transition: background .25s ease;
 
 }
 
 .genre-dropdown__button:hover {
 
-    background: rgba(255, 255, 255, .15);
+    background: rgba(66, 72, 75, .95);
 
 }
 
 .genre-dropdown__icon {
 
-    width: 16px;
+    width: 14px;
 
-    height: 16px;
+    height: 14px;
+
+    object-fit: contain;
 
 }
 
@@ -136,7 +146,13 @@
 
     .genre-dropdown__button {
 
-        width: fit-content;
+        width: 88px;
+
+        height: 36px;
+
+        padding: 0 14px;
+
+        font-size: 14px;
 
     }
 

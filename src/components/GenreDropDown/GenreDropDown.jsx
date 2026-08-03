@@ -47,7 +47,7 @@ function GenreDropDown() {
                 <img
                 src={ChevronDown}
                 alt="chevron down"
-                className="genre-dropdown__menu"
+                className="genre-dropdown__icon"
                 />
             </button>
 

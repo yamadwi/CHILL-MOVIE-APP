@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import "./Home.css";
+import "./Film.css";
 
 import Navbar from "../../components/Navbar/Navbar";
 import Hero from "../../features/home/Hero/Hero";

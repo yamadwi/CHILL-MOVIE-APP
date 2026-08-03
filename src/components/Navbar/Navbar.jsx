@@ -41,7 +41,7 @@ function Navbar() {
             </li>
 
             <li>
-              <Link to="/movies">
+              <Link to="/film">
                 Film
               </Link>
             </li>
