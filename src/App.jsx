@@ -7,6 +7,7 @@ import Series from "./pages/Series/Series";
 import Login from "./pages/Login/Login";
 import Register from "./pages/Register/Register";
 import MyList from "./pages/MyList/MyList";
+import Watch from "./pages/Watch/Watch";
 
 function App() {
 
@@ -74,6 +75,11 @@ function App() {
                         toggleFavorite={toggleFavorite}
                     />
                 }
+            />
+
+            <Route
+                path="/watch/:type/:id"
+                element={<Watch />}
             />
 
             <Route
