@@ -92,7 +92,9 @@ function App() {
                 element={<Register />}
             />
         </Routes>
+
     );
+    
 }
 
 export default App;
