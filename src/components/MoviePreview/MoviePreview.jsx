@@ -1,3 +1,5 @@
+import { useNavigate } from "react-router-dom";
+
 import "./MoviePreview.css"
 
 import PlayIcon from"../../assets/icons/play-circle.svg"
@@ -13,6 +15,8 @@ function MoviePreview({
     favorites,
     toggleFavorite,
 }) {
+
+    const navigate = useNavigate();
 
     if (!movie || !rect) return null;
 
@@ -34,6 +38,11 @@ function MoviePreview({
             window.scrollY -
             (PREVIEW_HEIGHT - rect.height),
     };
+
+    const handlePlay = () => {
+        navigate(`/watch/${movie.type}/${movie.id}`);
+        onclose();
+    }
 
     return(
         <div
@@ -59,7 +68,10 @@ function MoviePreview({
 
                         <div className="movie-preview__actions-left">
 
-                            <button className="movie-preview__button movie-preview__button--play">
+                            <button 
+                                className="movie-preview__button movie-preview__button--play"
+                                onClick={handlePlay}
+                            >
 
                                 <img
                                     src={PlayIcon}
@@ -75,7 +87,11 @@ function MoviePreview({
 
                                 <img
                                     src={isFavorite ? CheckIcon : PlusIcon}
-                                    alt={isFavorite ? "Hapus Dari Daftar Saya" : "Tambah Ke Daftar Saya"}
+                                    alt={
+                                        isFavorite 
+                                            ? "Hapus Dari Daftar Saya" 
+                                            : "Tambah Ke Daftar Saya"
+                                    }
                                 />
 
                             </button>
@@ -144,7 +160,9 @@ function MoviePreview({
             </div>
 
         </div>
+
     );
+
 }
 
 export default MoviePreview;

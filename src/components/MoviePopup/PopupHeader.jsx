@@ -8,7 +8,8 @@ function PopupHeader({
     movie, 
     onClose,
     favorites,
-    toggleFavorite, 
+    toggleFavorite,
+    onPlay,
 }) {
 
     const isFavorite = favorites.some(
@@ -29,6 +30,7 @@ function PopupHeader({
 
             <button
                 className="movie-popup__close"
+                type="button"
                 onClick={onClose}
             >
                 <img
@@ -47,12 +49,17 @@ function PopupHeader({
 
                 <div className="movie-popup__actions">
 
-                    <button className="movie-popup__play">
+                    <button 
+                        className="movie-popup__play"
+                        type="button"
+                        onClick={onPlay}
+                    >
                         Mulai
                     </button>
 
                     <button 
                         className="movie-popup__check"
+                        type="button"
                         onClick={() => toggleFavorite(movie)}
                     >
 

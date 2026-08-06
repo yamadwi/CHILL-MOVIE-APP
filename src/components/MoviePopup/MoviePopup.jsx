@@ -1,3 +1,5 @@
+import { useNavigate } from "react-router-dom";
+
 import "./MoviePopup.css";
 
 import PopupHeader from "./PopupHeader";
@@ -12,7 +14,14 @@ function MoviePopup({
     toggleFavorite, 
 }) {
 
+    const navigate = useNavigate();
+
     if (!movie) return null;
+
+    const handlePlay = () => {
+        onClose();
+        navigate(`/watch/${movie.type}/${movie.id}`);
+    }
 
     return (
 
@@ -31,6 +40,7 @@ function MoviePopup({
                     onClose={onClose}
                     favorites={favorites}
                     toggleFavorite={toggleFavorite}
+                    onPlay={handlePlay}
                 />
 
                 <PopupInfo
