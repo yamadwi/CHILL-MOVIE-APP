@@ -12,6 +12,8 @@ function MovieSection ({
     items,
     variant,
     onPreview,
+    showRemove = false,
+    onRemove,
 }) {
     const movieListRef = useRef(null);
 
@@ -57,6 +59,8 @@ function MovieSection ({
                         item={item}
                         variant={variant}
                         onClick={onPreview}
+                        showRemove={showRemove}
+                        onRemove={onRemove}
                     />
                         
                 ))}

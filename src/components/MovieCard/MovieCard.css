@@ -58,6 +58,33 @@
 
 }
 
+/* ======================================
+   REMOVE BUTTON
+====================================== */
+
+.movie-card__remove{
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, .75);
+    cursor: pointer;
+    z-index: 2;
+}
+
+.movie-card__remove img {
+    width: 14px;
+    height: 14px;
+    display: block;
+}
+
 /* ===========================
    MOBILE
 =========================== */
@@ -68,6 +95,18 @@
 
         border-radius: 8px;
 
+    }
+
+    .movie-card__remove {
+        top: 6px;
+        right: 6px;
+        width: 24px;
+        height: 24px;
+    }
+    
+    .movie-card__remove img {
+        width: 12px;
+        height: 12px;
     }
 
 }

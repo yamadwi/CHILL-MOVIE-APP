@@ -12,14 +12,18 @@ import Footer from "../../components/Footer/Footer";
 import useResponsive from "../../hooks/useResponsive";
 
 import {
-    continueWatching,
     chillOriginal,
     topRating,
     trending,
     newRelease,
 } from "../../data/homeSections";
 
-function Home({favorites, toggleFavorite}) {
+function Home({
+    favorites, 
+    toggleFavorite,
+    continueWatching,
+    removeContinueWatching,
+}) {
 
     const { isMobile } = useResponsive();
 
@@ -75,12 +79,18 @@ function Home({favorites, toggleFavorite}) {
 
             <main className="home">
 
-                <MovieSection
+                {continueWatching.length > 0 && (
+
+                    <MovieSection
                     title="Melanjutkan Tonton Film"
                     items={continueWatching}
                     variant="landscape"
                     onPreview={handlePreview}
-                />
+                    showRemove={true}
+                    onRemove={removeContinueWatching}
+                    />
+
+                )}
 
                 {favorites.length > 0 && (
 

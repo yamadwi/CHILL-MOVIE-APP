@@ -6,8 +6,9 @@ import VideoPlayer from "../../components/VideoPlayer/VideoPlayer";
 
 import movies from "../../data/movies";
 import series from "../../data/series";
+import { useEffect } from "react";
 
-function Watch() {
+function Watch({addContinueWatching}) {
 
     const { type, id } = useParams();
 
@@ -19,7 +20,15 @@ function Watch() {
             : series.find(
                 (item) => item.id === Number(id)
             );
+    
+    useEffect(() => {
 
+        if (selectedContent) {
+            addContinueWatching(selectedContent);
+        }
+
+    }, [selectedContent, addContinueWatching]);
+    
     return (
         <main className="watch">
 

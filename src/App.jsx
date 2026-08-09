@@ -13,6 +13,8 @@ function App() {
 
     const[favorites, setFavorites] = useState([]);
 
+    const [continueWatching, setContinueWatching] = useState([]);
+
     const toggleFavorite = (movie) => {
 
         const isFavorite = favorites.some(
@@ -35,14 +37,44 @@ function App() {
         
     };
 
+    const addContinueWatching = (movie) => {
+
+        const isAlreadyInContinueWatching = continueWatching.some(
+            (item) => item.id === movie.id
+        );
+
+        if (isAlreadyInContinueWatching){
+            return;
+        };
+
+        setContinueWatching([
+            ...continueWatching,
+            movie,
+        ]);
+
+    };
+
+    const removeContinueWatching = (movieId) => {
+
+        setContinueWatching(
+            continueWatching.filter(
+                (item) => item.id !== movieId
+            )
+        );
+
+    };
+
     return (
+        
         <Routes>
             <Route
                 path="/"
                 element={
                     <Home 
                         favorites={favorites}
-                        toggleFavorite={toggleFavorite}    
+                        toggleFavorite={toggleFavorite}
+                        continueWatching={continueWatching}
+                        removeContinueWatching={removeContinueWatching}
                     />
                 }
             />
@@ -52,7 +84,9 @@ function App() {
                 element={
                     <Film 
                         favorites={favorites}
-                        toggleFavorite={toggleFavorite}    
+                        toggleFavorite={toggleFavorite}
+                        continueWatching={continueWatching}
+                        removeContinueWatching={removeContinueWatching}    
                     />
                 }
             />
@@ -62,7 +96,9 @@ function App() {
                 element={
                     <Series 
                         favorites={favorites}
-                        toggleFavorite={toggleFavorite}    
+                        toggleFavorite={toggleFavorite} 
+                        continueWatching={continueWatching}
+                        removeContinueWatching={removeContinueWatching}   
                     />
                 }
             />
@@ -79,7 +115,11 @@ function App() {
 
             <Route
                 path="/watch/:type/:id"
-                element={<Watch />}
+                element={
+                    <Watch 
+                        addContinueWatching={addContinueWatching}
+                    />
+                }
             />
 
             <Route
