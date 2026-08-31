@@ -1,13 +1,13 @@
 import movies from "./movies";
 import series from "./series";
 
-export const continueWatching = [
-    movies[11],       // The Batman
-    series[4],        // Blue Lock
-    movies[10],       // The Tomorrow War
-    series[6],        // My Perfect Stranger
-    movies[9],        // The Little Mermaid
-];
+// export const continueWatching = [
+//     movies[11],       // The Batman
+//     series[4],        // Blue Lock
+//     movies[10],       // The Tomorrow War
+//     series[6],        // My Perfect Stranger
+//     movies[9],        // The Little Mermaid
+// ];
 
 export const chillOriginal = [
     movies[3],        // Spider-Man: Across the Spider-Verse
