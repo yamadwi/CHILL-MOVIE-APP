@@ -15,7 +15,7 @@ import MyPerfectStrangerD from "../assets/images/Poster-Display/My-Perfect-Stran
 
 const series = [
   {
-    id: 1,
+    id: 13,
     type: "series",
 
     title: "Ted Lasso",
@@ -72,7 +72,7 @@ const series = [
   },
 
   {
-    id: 2,
+    id: 14,
     type: "series",
 
     title: "Duty After School",
@@ -126,7 +126,7 @@ const series = [
   },
 
   {
-    id: 3,
+    id: 15,
     type: "series",
 
     title: "All of Us Are Dead",
@@ -180,7 +180,7 @@ const series = [
   },
 
   {
-    id: 4,
+    id: 16,
     type: "series",
 
     title: "Alice in Borderland",
@@ -233,7 +233,7 @@ const series = [
   },
 
   {
-    id: 5,
+    id: 17,
     type: "series",
 
     title: "Blue Lock",
@@ -286,7 +286,7 @@ const series = [
   },
 
   {
-    id: 6,
+    id: 18,
     type: "series",
 
     title: "My Hero Academia",
@@ -340,7 +340,7 @@ const series = [
   },
 
   {
-    id: 7,
+    id: 19,
     type: "series",
 
     title: "My Perfect Stranger",
