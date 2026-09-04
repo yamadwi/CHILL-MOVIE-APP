@@ -8,7 +8,12 @@ import MoviePreview from "../../components/MoviePreview/MoviePreview";
 import MoviePopup from "../../components/MoviePopup/MoviePopup";
 
 import useResponsive from "../../hooks/useResponsive";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+
+import movies from "../../data/movies";
+import series from "../../data/series";
+
+import { getMyList } from "../../services/api";
 
 function MyList({
     favorites,
@@ -17,8 +22,42 @@ function MyList({
 
     const { isMobile } = useResponsive();
 
+    const[myList, setMyList] = useState([]);
+
     const[preview, setPreview] = useState(null);
     const[popupMovie, setPopupMovie] = useState(null);
+
+    useEffect(() => {
+        
+        const fetchMylist = async () => {
+            try{
+                const response = await getMyList();
+
+                const allContents = [
+                    ...movies,
+                    ...series,
+                ];
+
+                const mappedMyList = response.data
+                    .map((item) => {
+                        return allContents.find(
+                            (content) =>
+                                content.id === Number(item.contentId)
+                        );
+                    })
+                    .filter(Boolean);
+
+                setMyList(mappedMyList);
+            }catch(error){
+                console.error(
+                    "Gagal mengambil My List",
+                    error
+                );
+            }
+        };
+        fetchMylist();
+        
+    }, []);
 
     const handlePreview = (movie, rect) => {
 
@@ -72,11 +111,11 @@ function MyList({
 
                     </h1>
 
-                    {favorites.length > 0 ?(
+                    {myList.length > 0 ?(
 
                         <MovieGrid
                             title=""
-                            items={favorites}
+                            items={myList}
                             variant="portrait"
                             onPreview={handlePreview}
                         />

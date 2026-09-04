@@ -6,4 +6,6 @@ const API = axios.create({
 
 export const getContents = () => API.get("/contents");
 
+export const getMyList = () => API.get("/my-list");
+
 export default API; 
