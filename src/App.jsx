@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
 
 import Home from "./pages/Home/Home";
@@ -9,30 +9,77 @@ import Register from "./pages/Register/Register";
 import MyList from "./pages/MyList/MyList";
 import Watch from "./pages/Watch/Watch";
 
+import movies from "./data/movies";
+import series from "./data/series";
+
+import{
+    addToMylist,
+    getMyList,
+} from "./services/api";
+
 function App() {
 
     const[favorites, setFavorites] = useState([]);
 
     const [continueWatching, setContinueWatching] = useState([]);
 
-    const toggleFavorite = (movie) => {
+    useEffect(() =>{
+
+        const fetchMyList = async () => {
+
+            try{
+                const response = await getMyList();
+
+                const allContents = [
+                    ...movies,
+                    ...series,
+                ];
+
+                const mappedFavorites = response.data
+                    .map((item) => {
+                        return allContents.find(
+                            (content) => 
+                                content.id === Number(item.contentId)
+                        );
+                    })
+                    .filter(Boolean);
+
+                setFavorites(mappedFavorites);
+
+            } catch (error){
+                console.error(
+                    "Gagal mengambil daftar saya",
+                    error
+                );
+            }
+
+        };
+
+        fetchMyList();
+
+    }, []);
+
+    const toggleFavorite = async (movie) => {
 
         const isFavorite = favorites.some(
             (item) => item.id === movie.id
         );
 
-        if (isFavorite){
-            setFavorites(
-                favorites.filter(
-                    (item) => item.id !== movie.id
-                )
-            );
-
-        } else{
+        if (isFavorite){        
+            return;
+        } 
+        
+        try{
+            await addToMylist(movie.id);
             setFavorites([
                 ...favorites,
                 movie,
             ]);
+        }catch (error){
+            console.error(
+                "gagal menambahkan ke daftar saya",
+                error
+            );
         }
         
     };

@@ -1,11 +1,19 @@
 import axios from "axios";
 
 const API = axios.create({
-    baseURL: "https://6a8bd0a063f113bab0b79661.mockapi.io"
+    baseURL: import.meta.env.VITE_API_URL,
 });
 
 export const getContents = () => API.get("/contents");
 
 export const getMyList = () => API.get("/my-list");
+
+export const addToMylist = (contentId) =>
+    API.post("/my-list", {
+        contentId,
+    });
+
+export const deleteFromMyList = (id) =>
+    API.delete(`/my-list/${id}`);
 
 export default API; 
